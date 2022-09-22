@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
-df1 = pd.read_excel("/content/drive/MyDrive/ADSL.xlsx")
-df2 = pd.read_excel("/content/drive/MyDrive/ADVS.xlsx")
-df3 = pd.read_excel("/content/drive/MyDrive/ADAE.xlsx")
+df1 = pd.read_excel("ADSL.xlsx")
+df2 = pd.read_excel("ADVS.xlsx")
+df3 = pd.read_excel("ADAE.xlsx")
 df_bmi = df2[['USUBJID','AVISIT','PARAMCD','AVAL']]
 df_bmi = df_bmi.pivot_table(index=['USUBJID','AVISIT'], columns='PARAMCD', values='AVAL',aggfunc='first')
 df_bmi = df_bmi.reset_index()
