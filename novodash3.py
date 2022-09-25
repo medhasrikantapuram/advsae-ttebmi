@@ -85,6 +85,7 @@ if chart_selector=="Dot Plot - Time to Event":
                   )
   st.plotly_chart(fig,use_container_width = True)
 if chart_selector=="Line Chart - BMI":
+  st.write("### Distribution of BMI across visits")
   fig2 = px.line(bmi_data) 
   fig2.update_layout(
       updatemenus=[
@@ -92,7 +93,8 @@ if chart_selector=="Line Chart - BMI":
           type="dropdown",
           direction="down",
           buttons = buttons)
-      ],title="Distribution of BMI across visits", legend_title="Subject ID",
+      ]#,title="Distribution of BMI across visits"
+    , legend_title="Subject ID",
       xaxis_title="Timeline",
       yaxis_title="BMI",
       xaxis = dict(
